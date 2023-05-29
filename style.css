@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700;1,800&display=swap');
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --font: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Light-grey);
+}
+
+.container {
+  position: relative;
+  width: 560px;
+  min-height: 350px;
+  background-color: var(--White);
+  border-radius: 10px;
+  border-bottom-right-radius: 120px;
+  padding: 2.5rem;
+}
+
+.age-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 3rem;
+}
+
+label {
+  font-family: var(--font);
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--Smokey-grey);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.month,
+.day,
+.year {
+  margin-bottom: 0.5rem;
+}
+
+input[type='number'] {
+  font-family: var(--font);
+  width: 100px;
+  height: 40px;
+  border: 1px solid var(--Light-grey);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+input.error {
+  border: 1px solid var(--Light-red);
+}
+
+input::placeholder {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--Smokey-grey);
+}
+
+.send {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border-radius: 50%;
+  background-color: var(--Purple);
+  border: none;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.separator-line {
+  position: absolute;
+  top: -10.25rem;
+  left: 12.5rem;
+  rotate: 90deg;
+  width: 1px;
+  height: 600px;
+  background-color: var(--Light-grey);
+}
+
+.output {
+  font-family: var(--font);
+}
+
+.months,
+.years,
+.days {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--Purple);
+}
+
+.output p {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+    min-height: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .age-form {
+    flex-direction: row;
+  }
+
+  .input-group {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    margin-top: 1.5rem;
+    align-self: center;
+  }
+}
